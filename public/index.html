@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MNG Kargo Entegrasyon Paneli</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <div class="app-container">
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <div class="sidebar-header">
+        <div class="logo">
+          <i class="fas fa-truck-fast"></i>
+          <span>MNG Kargo</span>
+        </div>
+        <span class="version">v1.0</span>
+      </div>
+      
+      <nav class="sidebar-nav">
+        <a href="#" class="nav-item active" data-page="dashboard">
+          <i class="fas fa-chart-line"></i>
+          <span>Gösterge Paneli</span>
+        </a>
+        <a href="#" class="nav-item" data-page="manuel-gonderi">
+          <i class="fas fa-box"></i>
+          <span>Manuel Gönderi</span>
+        </a>
+        <a href="#" class="nav-item" data-page="gonderiler">
+          <i class="fas fa-list"></i>
+          <span>Tüm Gönderiler</span>
+        </a>
+        <a href="#" class="nav-item" data-page="dia-entegrasyon">
+          <i class="fas fa-plug"></i>
+          <span>DİA Entegrasyonu</span>
+        </a>
+        <a href="#" class="nav-item" data-page="takip">
+          <i class="fas fa-search-location"></i>
+          <span>Gönderi Takip</span>
+        </a>
+        
+        <div class="nav-divider"></div>
+        
+        <a href="#" class="nav-item" data-page="ayarlar">
+          <i class="fas fa-cog"></i>
+          <span>Ayarlar</span>
+        </a>
+        <a href="#" class="nav-item" data-page="loglar">
+          <i class="fas fa-history"></i>
+          <span>İşlem Logları</span>
+        </a>
+      </nav>
+
+      <div class="sidebar-footer">
+        <div class="connection-status" id="connectionStatus">
+          <span class="status-dot"></span>
+          <span class="status-text">Bağlantı kontrol ediliyor...</span>
+        </div>
+      </div>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main-content">
+      <!-- Header -->
+      <header class="main-header">
+        <div class="header-left">
+          <button class="sidebar-toggle" id="sidebarToggle">
+            <i class="fas fa-bars"></i>
+          </button>
+          <h1 class="page-title" id="pageTitle">Gösterge Paneli</h1>
+        </div>
+        <div class="header-right">
+          <div class="header-date">
+            <i class="fas fa-calendar"></i>
+            <span id="currentDate"></span>
+          </div>
+          <button class="btn btn-primary" id="refreshBtn">
+            <i class="fas fa-sync-alt"></i>
+            Yenile
+          </button>
+        </div>
+      </header>
+
+      <!-- Page Content -->
+      <div class="page-content" id="pageContent">
+        <!-- Dashboard içeriği JavaScript ile yüklenecek -->
+      </div>
+    </main>
+  </div>
+
+  <!-- Toast Notification -->
+  <div class="toast-container" id="toastContainer"></div>
+
+  <!-- Modal -->
+  <div class="modal-overlay" id="modalOverlay">
+    <div class="modal" id="modal">
+      <div class="modal-header">
+        <h3 class="modal-title" id="modalTitle">Modal Başlık</h3>
+        <button class="modal-close" id="modalClose">
+          <i class="fas fa-times"></i>
+        </button>
+      </div>
+      <div class="modal-body" id="modalBody">
+        <!-- Modal içeriği -->
+      </div>
+    </div>
+  </div>
+
+  <!-- Loading Overlay -->
+  <div class="loading-overlay" id="loadingOverlay">
+    <div class="loading-spinner">
+      <i class="fas fa-circle-notch fa-spin"></i>
+      <span>İşlem yapılıyor...</span>
+    </div>
+  </div>
+
+  <script src="/js/app.js"></script>
+</body>
+</html>
