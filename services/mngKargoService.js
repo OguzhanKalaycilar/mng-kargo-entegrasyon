@@ -121,7 +121,7 @@ class MngKargoService {
           smsPreference3: 0,
           paymentType: 1,
           deliveryType: 1,
-          "description": "Açıklama 1",
+          description: 'Açıklama 1',
           marketPlaceShortCode: '',
           marketPlaceSaleCode: ''
         },
